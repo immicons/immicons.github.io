@@ -1,104 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>IMMICONS</title>
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
-  	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
-  	<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
-  	<link href="https://fonts.googleapis.com/css?family=Cardo&display=swap" rel="stylesheet">
-  	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<style type="text/css">
-		body,html{
-			height: 100%;
-			width: 100%;
-			margin: 0px;
-		}
-		#myVideo {
-  			position: fixed;
-  			right: 0;
-  			bottom: 0;
-  			min-width: 100%; 
-  			min-height: 100%;
-		}
-		.content {
-  			position: fixed;
-  			bottom: 0;
-  			background: rgb(0,0,139,0.7);
-  			color: #f1f1f1;
-  			width: 65%;
-  			height: 100%;
-  			padding: 20px;
-  			-webkit-transform: skewX(-8deg);
-  			transform: skewX(-8deg);
-  			-webkit-transform-origin: top left;
-  			transform-origin: top left;
-		}
-		.contentOne {
-  			position: fixed;
-  			top: 10%;
-  			left: 70%;
-  			border-radius: 10px;
-  			
-		}
-		.container-fluid{
-			-webkit-transform: skewX(8deg);
-  			transform: skewX(8deg);
-  			-webkit-transform-origin: top left;
-  			transform-origin: top left;
-  			margin: 30% 70px;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>IMMICONS</title>
+    <link rel="stylesheet" href="stylesheet/index.css">
 </head>
-<body  onload="typeWriter()">
-	<video autoplay muted loop id="myVideo">
-  		<source src="MyMovie6.mp4" type="video/mp4">
-  		Your browser does not support HTML5 video.
-	</video>
-	<div class="content">
-  		<div class="container-fluid">
-  			<h1 style="font-size: 52px;font-family: 'Lobster', cursive;" id="demo"></h1>
-  			<p class="w3-container w3-center w3-animate-zoom" style="font-family: 'Cardo', serif;font-size: 20px;padding-right: 50px;text-align: center;">We're working hard to update our database to provide<br> best Australian Migration Service<br>in your click. Till Then, you can contact us via email or phone.</p>
-  			<br>
-  			<button type="button" class="btn btn-primary w3-animate-right" data-toggle="collapse" data-target="#demo" style="background-color: ghostwhite;height: 50px;border-radius: 17px;color: rgb(0,0,139,0.7);font-family: 'Cinzel', serif;font-weight: bold;margin-left: 40%;">Contact Us</button><br>
-  			<div id="demo" class="collapse" style="margin-left: 20%;">
-  				<div class="row" style="margin-right: 13%;">
-  					<div class="col-xl">
-  						<h4>Australia Office</h4>
-  						<p>+614 1296 9924</p>
-  					</div>
-  					<div class="col-xl" style="margin-right: 50px;">
-  						<h4>Bangladesh Office</h4>
-  						<p>+88 018 4182 7676</p>
-  					</div>
-  				</div>
-    			<p style="padding-left: 20%;">immiconsultants@gmail.com</p>
-  			</div>
-  			<br>
-  			<button type="button" class="btn btn-primary btn-block w3-animate-left" style="width: 30%;background-color: ghostwhite;height: 50px;border-radius: 17px;margin-left: 35%;"><a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-finder" style="text-decoration: none;color: rgb(0,0,139,0.7);font-family: 'Cinzel', serif;font-weight: bold;">Explore Visa Option</a></button>
-  		</div>
-	</div>
-	<div class="contentOne">
-		<img src="immiconslogo.png" style="height: 120px;">
-	</div>
+<body>
 
-	<script>
-var i = 0;
-var txt = 'We are Updating Our Database !';
-var speed = 50;
 
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-</script>
+    <video autoplay muted loop id="background">
+        <source src="stylesheet/background.mp4" type="video/mp4">
+    </video>
+
+    <div class="contant">
+        <div class="container-fluid">
+            <h1>We are updating our database</h1>
+            <p>We're working hard to update our database to provide<br> best Australian Migration Service<br>in your click. Till Then, you can contact us via email or phone.</p>
+            <button type="button" class="btn" id="contactBtn">Contact Us</button>
+            <br><br>
+            <button type="button" class="btn" id="tourBtn"><a href="indexOne.html" style="text-decoration: none;color: rgb(0,0,139);"> Take a tour </a>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="contantOne">
+        <img src="stylesheet/immiconslogo.png">
+    </div>
 </body>
 </html>
